@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+input{
+  width: 5vh;
+  height: 4vh;
+  text-align: center;
+}
+
+.enter-btn{
+  margin: 20px;
+    padding: 5px 25px;
+    background: #fff;
+    border: solid 2px green;
+    font-size: 18px;
+}
+
+.inactiveClass>input{
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.activeClass>input{
+  text-transform: capitalize;
+}
