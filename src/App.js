@@ -20,8 +20,8 @@ function App() {
           Learn React
         </a> */}
 
-        <Home/>
-        {/* <HomeRevamp/> */}
+        {/* <Home/> */}
+        <HomeRevamp/>
       </header>
     </div>
   );

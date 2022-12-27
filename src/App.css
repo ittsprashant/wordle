@@ -14,14 +14,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000;
+  /* color: white; */
 }
 
 .App-link {
@@ -38,24 +39,111 @@
 }
 
 input{
-  width: 5vh;
-  height: 4vh;
+  width: 40px;
+  height: 40px;
   text-align: center;
+  margin: 3px;
+  font-size: 1.8rem;
+  line-height: 1;
+  text-transform: capitalize;
+  color:#fff;
+  font-weight: 600;
+  border: solid 2px grey;
 }
+
+
+
+
+#color-1{
+  animation-name: flip;
+  animation-duration: 1s;
+  background-color: orange;
+  border: solid 2px orange;
+}
+
+#color-2{
+  animation-name: flip;
+  animation-duration: 1s;
+  background-color: forestgreen;
+  border: solid 2px forestgreen;
+}
+
+#color-0{
+  background-color: grey;
+  animation-name: flip;
+  animation-duration: 1s;
+  border: solid 2px grey;
+}
+
+.card-inactive-green{
+  animation-name: flip;
+  animation-duration: 1s;
+  background-color: forestgreen;
+}
+
+.card-inactive-orange{
+  animation-name: flip;
+  animation-duration: 1s;
+  background-color: orange;
+}
+
+.card-inactive-grey{
+  background-color: grey;
+  animation-name: flip;
+  animation-duration: 1s;
+}
+
+/* input:hover{
+  animation-name: flip;
+  animation-duration: 1.5s;
+} */
+
+@keyframes flip {
+  0%
+  {
+  height: 35px
+  }
+  50%{ 
+    height: 1px;
+  }
+  100%{
+    height: 35px;
+
+  }
+}
+
+
 
 .enter-btn{
   margin: 20px;
     padding: 5px 25px;
     background: #fff;
-    border: solid 2px green;
+    border: solid 2px darkgrey;
     font-size: 18px;
+    font-weight: bold;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
 }
 
 .inactiveClass>input{
   color: #fff;
   text-transform: capitalize;
+  /* min-height: 35px; */
 }
 
 .activeClass>input{
   text-transform: capitalize;
+  /* min-height: 35px; */
+
 }
+
+.activeInp{
+color:#282c34
+}roup
+
+.inputGroup{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+

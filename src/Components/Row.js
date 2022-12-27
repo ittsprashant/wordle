@@ -55,13 +55,18 @@ function Row(props) {
         let character = e.target.value;
         y[columnNumber-1] = character;
 
-            if(character)
+            if(character){
+
             str = word.slice(0,columnNumber-1) + character  +word.slice(columnNumber-1, word.length)
+        document.getElementById(`${order}"-c-"${columnNumber+1}`).active()
+
+            }
             else{
                 str = word.slice(0,columnNumber-1) + word.slice(columnNumber)
             }
             setList(y)
             setWord(str)
+
 
     }
 
@@ -75,15 +80,21 @@ function Row(props) {
 
     }
 
+    const getClassName = (item) => {
+        if(item){
+            return `card-inactive-${item}`
+        }
+    }
+
     
 
     return (
         <div id={order} className={(order== enabledRows[0]) ? "activeClass":"inactiveClass"}>
-            <input value={list?.[0]?.text} id={order+"-c-1"} style={{backgroundColor: getColor(list?.[0]?.color)}} disabled={isDisabled(enabledRows, order)} onChange={(e) => inputChar(e, 1)} maxLength="1"></input>
-            <input value={list?.[1]?.text} id={order+"-c-2"} style={{backgroundColor: getColor(list?.[1]?.color)}} disabled={isDisabled(enabledRows, order)} onChange={(e) => inputChar(e, 2)} maxLength="1"></input>
-            <input value={list?.[2]?.text} id={order+"-c-3"} style={{backgroundColor: getColor(list?.[2]?.color)}} disabled={isDisabled(enabledRows, order)} onChange={(e) => inputChar(e, 3)} maxLength="1"></input>
-            <input value={list?.[3]?.text} id={order+"-c-4"} style={{backgroundColor: getColor(list?.[3]?.color)}} disabled={isDisabled(enabledRows, order)} onChange={(e) => inputChar(e, 4)} maxLength="1"></input>
-            <input value={list?.[4]?.text} id={order+"-c-5"} style={{backgroundColor: getColor(list?.[4]?.color)}} disabled={isDisabled(enabledRows, order)} onChange={(e) => inputChar(e, 5)} maxLength="1"></input>
+            <input value={list?.[0]?.text} id={order+"-c-1"} className={getClassName(list?.[1]?.color)} style={{animationDelay:"0ms"}} disabled={isDisabled(enabledRows, order)} onChange={(e) => inputChar(e, 1)} maxLength="1"></input>
+            <input value={list?.[1]?.text} id={order+"-c-2"} className={getClassName(list?.[1]?.color)} disabled={isDisabled(enabledRows, order)} style={{animationDelay:"100ms"}} onChange={(e) => inputChar(e, 2)} maxLength="1"></input>
+            <input value={list?.[2]?.text} id={order+"-c-3"} className={getClassName(list?.[2]?.color)} disabled={isDisabled(enabledRows, order)} style={{animationDelay:"200ms"}} onChange={(e) => inputChar(e, 3)} maxLength="1"></input>
+            <input value={list?.[3]?.text} id={order+"-c-4"} className={getClassName(list?.[3]?.color)} disabled={isDisabled(enabledRows, order)} style={{animationDelay:"300ms"}} onChange={(e) => inputChar(e, 4)} maxLength="1"></input>
+            <input value={list?.[4]?.text} id={order+"-c-5"} className={getClassName(list?.[4]?.color)} disabled={isDisabled(enabledRows, order)} style={{animationDelay:"400ms"}} onChange={(e) => inputChar(e, 5)} maxLength="1"></input>
         </div>
     )
 }
