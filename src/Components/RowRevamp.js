@@ -41,7 +41,7 @@ function RowRevamp(props) {
 
         if (document.getElementById(`r-${activeRow}-row-${i}`)) {
           // document.getElementById(`r-${activeRow}-row-${i}`).id = `row-${activeRow}-${i}-color-${tempList[i-1].key}`
-          document.getElementById(`r-${activeRow}-row-${i}`).id = `color-${tempList[i - 1].key}`
+          document.getElementById(`r-${activeRow}-row-${i}`).id = `color-${tempList[i - 1]?.key}`
 
         }
 

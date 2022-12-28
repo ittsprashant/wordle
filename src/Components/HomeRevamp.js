@@ -8,6 +8,7 @@ function HomeRevamp() {
   const[successAlert, setSuccessAlert] = useState(false);
   const[finalWord, setFinalWord] = useState("");
   const[success, setSuccess] = useState();
+  const[enterDisabled, setEnterDisabled] = useState(false);
   const[mainList, setMainList] = useState([{"order":1, value:"", detail:[]}, {"order":2, value:"", detail:[]}, {"order":3, value:"", detail:[]}, {"order":4, value:"", detail:[]}, {"order":5, value:"", detail:[]}])
   const todaysWord = "CHORD";
   const todaysList = todaysWord.toLowerCase().split("");
@@ -32,6 +33,8 @@ function HomeRevamp() {
 
   const enter = () => {
 
+    setEnterDisabled(true);
+
     if(!successAlert){
     if (finalWord.length == 5) {
       checkWordValidity(finalWord)
@@ -42,10 +45,16 @@ function HomeRevamp() {
               }
               else
                   alert("Word does not exist in dictionary!")
+
+                  setEnterDisabled(false);
+              
           })
   }
-  else
+  else{
       alert("Complete the word to submit")
+    setEnterDisabled(false);
+
+  }
 }
 else{
 
@@ -122,7 +131,7 @@ else{
         )
       })}
 
-    <button className='enter-btn' onClick={()=> {enter()}}>Enter</button>
+    <button className='enter-btn' disabled={enterDisabled} onClick={()=> {enter()}}>Enter</button>
 
 
     </div>
