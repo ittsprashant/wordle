@@ -55,27 +55,31 @@ input{
 
 
 #color-1{
-  animation-name: flip;
+  animation-name: flipOrange;
   animation-duration: 1s;
-  background-color: orange;
-  border: solid 2px orange;
+  animation-fill-mode: both;
+  
+  /* border: solid 2px orange; */
 }
 
 #color-2{
-  animation-name: flip;
+  animation-name: flipGreen;
   animation-duration: 1s;
-  background-color: forestgreen;
-  border: solid 2px forestgreen;
+  animation-fill-mode: both;
+
+  /* background-color: slimeGreen;
+  border: solid 2px slimeGreen; */
 }
 
 #color-0{
-  background-color: grey;
-  animation-name: flip;
+  animation-name: flipGrey;
   animation-duration: 1s;
-  border: solid 2px grey;
+  animation-fill-mode: both;
+  /* background-color: grey;
+  border: solid 2px grey; */
 }
 
-.card-inactive-green{
+/* .card-inactive-green{
   animation-name: flip;
   animation-duration: 1s;
   background-color: forestgreen;
@@ -91,12 +95,75 @@ input{
   background-color: grey;
   animation-name: flip;
   animation-duration: 1s;
-}
+} */
 
 /* input:hover{
   animation-name: flip;
   animation-duration: 1.5s;
 } */
+
+@keyframes flipOrange {
+  0%
+  {
+  height: 40px;
+  background: #fff;
+  border: solid 2px darkgrey;
+  }
+  50%{ 
+    height: 1px;
+    background: #fff;
+    border: solid 2px darkgrey;
+  }
+  100%{
+    height: 40px;
+  background-color: orange;
+  border: solid 2px orange;
+
+
+
+  }
+}
+
+@keyframes flipGreen {
+  0%
+  {
+  height: 40px;
+  background: #fff;
+  border: solid 2px darkgrey;
+  }
+  50%{ 
+    height: 1px;
+    background: #fff;
+    border: solid 2px darkgrey;
+  }
+  100%{
+    height: 40px;
+    background-color: limegreen;
+    border: solid 2px limegreen;
+
+  }
+}
+
+
+@keyframes flipGrey {
+  0%
+  {
+  height: 40px;
+  background: #fff;
+  border: solid 2px darkgrey;
+  }
+  50%{ 
+    height: 1px;
+    background: #fff;
+    border: solid 2px darkgrey;
+  }
+  100%{
+    height: 40px;
+    background-color: grey;
+    border: solid 2px grey;
+
+  }
+}
 
 @keyframes flip {
   0%
@@ -139,7 +206,7 @@ input{
 
 .activeInp{
 color:#282c34
-}roup
+}
 
 .inputGroup{
   display: grid;
