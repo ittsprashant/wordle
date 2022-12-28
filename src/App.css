@@ -39,8 +39,8 @@
 }
 
 input{
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   text-align: center;
   margin: 3px;
   font-size: 1.8rem;
@@ -105,7 +105,7 @@ input{
 @keyframes flipOrange {
   0%
   {
-  height: 40px;
+  height: 38px;
   background: #fff;
   border: solid 2px darkgrey;
   }
@@ -115,7 +115,7 @@ input{
     border: solid 2px darkgrey;
   }
   100%{
-    height: 40px;
+    height: 38px;
   background-color: orange;
   border: solid 2px orange;
 
@@ -127,7 +127,7 @@ input{
 @keyframes flipGreen {
   0%
   {
-  height: 40px;
+  height: 38px;
   background: #fff;
   border: solid 2px darkgrey;
   }
@@ -137,7 +137,7 @@ input{
     border: solid 2px darkgrey;
   }
   100%{
-    height: 40px;
+    height: 38px;
     background-color: limegreen;
     border: solid 2px limegreen;
 
@@ -148,7 +148,7 @@ input{
 @keyframes flipGrey {
   0%
   {
-  height: 40px;
+  height: 38px;
   background: #fff;
   border: solid 2px darkgrey;
   }
@@ -158,7 +158,7 @@ input{
     border: solid 2px darkgrey;
   }
   100%{
-    height: 40px;
+    height: 38px;
     background-color: grey;
     border: solid 2px grey;
 

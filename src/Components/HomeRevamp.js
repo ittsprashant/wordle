@@ -113,7 +113,7 @@ else{
   }
 
   return (
-    <div>
+    <div style={{padding:"2px"}}>
       <h2>Wordle</h2>
 
       {mainList.map((item, index) => {
